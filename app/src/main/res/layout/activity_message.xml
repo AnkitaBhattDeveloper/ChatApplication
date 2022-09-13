@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    android:orientation="vertical"
+    tools:context=".activity.MessageActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_200"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rvSenderMsgs"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="0dp"
+            android:layout_weight="0.2"
+            android:layout_height="40dp"
+            android:padding="5dp"
+            android:src="@color/white" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="5dp"
+            android:text="jfhfhfdsfhfjhfjdhfjdshd"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:id="@+id/voiceCall"
+            android:layout_width="0dp"
+            android:layout_weight="0.3"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="5dp"
+            android:padding="3dp"
+            android:src="@drawable/ic_baseline_call_24" />
+
+
+    </LinearLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvSenderMsgs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"/>
+
+   <!-- <ImageView
+        android:id="@+id/ivImage"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        tools:layout_editor_absoluteX="127dp"
+        tools:layout_editor_absoluteY="309dp" />-->
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_200"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <EditText
+            android:id="@+id/etSenderMsg"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:layout_marginHorizontal="10dp"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:id="@+id/document"
+            android:layout_width="0dp"
+            android:layout_weight="0.1"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:padding="3dp"
+            android:layout_marginEnd="5dp"
+            android:src="@drawable/ic_baseline_link_24" />
+
+        <ImageView
+            android:id="@+id/send"
+            android:layout_width="0dp"
+            android:layout_weight="0.1"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:padding="3dp"
+            android:src="@drawable/ic_baseline_send_24" />
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
